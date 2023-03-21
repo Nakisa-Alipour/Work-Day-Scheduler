@@ -9,6 +9,7 @@ $(document).ready(function() {
   //Display the current dau at the top of the calender
   var currentDate = dayjs().format("dddd, MMMM D");
   $('#currentDay').text(currentDate);
+  console.log(currentDate);
 })
 
 // Create time blocks for standard business hours
@@ -16,13 +17,25 @@ var startHour = 9;
 var endHour = 17;
 
 for (var hour=startHour; hour<= endHour; hour++) {
-  var $timeBlock = $("div").addClass("row timeblock");
+  var $timeBlock = $("<div>").addClass("row timeblock");
   var $hour = $("<div>");
     $hour.addClass("col-2 col-md-1 hour text-center py-3")
-    $hour.text(dayjs({ hour }).format("hA"))
+    $hour.text(hour)    //instead of: $hour.text(dayjs({ hour }).format("hA"))
+    $timeBlock.append($hour);
+    console.log(hour);
   var $description = $("<textarea>")
     $description.addClass("col-8 col-md-10 description");
+    $description.addClass("row", "3");
     $description.attr("id", "event-" + hour);
+    $timeBlock.append($description);
+  var $saveBtn = $("<button>")
+    $saveBtn.addClass("btn saveBtn col-2 col-md-1")
+    //$saveBtn.attr("data-hour", hour);
+    $timeBlock.append($saveBtn);
+  
+  $("#planner").append($timeBlock);
+
+    
   
 }
 
