@@ -11,6 +11,20 @@ $(document).ready(function() {
   $('#currentDay').text(currentDate);
 })
 
+// Create time blocks for standard business hours
+var startHour = 9;
+var endHour = 17;
+
+for (var hour=startHour; hour<= endHour; hour++) {
+  var $timeBlock = $("div").addClass("row timeblock");
+  var $hour = $("<div>");
+    $hour.addClass("col-2 col-md-1 hour text-center py-3")
+    $hour.text(dayjs({ hour }).format("hA"))
+  var $description = $("<textarea>")
+    $description.addClass("col-8 col-md-10 description");
+    $description.attr("id", "event-" + hour);
+  
+}
 
 $(function () {
   // TODO: Add a listener for click events on the save button. This code should
