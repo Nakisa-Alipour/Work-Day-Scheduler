@@ -27,7 +27,8 @@ When I refresh the page, the saved events persist.
 To use this application, simply clone the repository and open the index.html file in your web browser. The application will run in the browser.
 
 
-## URL for the deployed application: https://nakisa-alipour.github.io/Work-Day-Scheduler/
+## URL 
+for the deployed application: https://nakisa-alipour.github.io/Work-Day-Scheduler/
 
 
 ## Usage
