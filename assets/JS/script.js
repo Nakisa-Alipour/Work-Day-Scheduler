@@ -9,7 +9,7 @@ $(document).ready(function() {
 
 // Create time blocks for standard business hours
 var startHour = 9;
-var endHour = 21;
+var endHour = 17;
 
 
 // Loop through each hour of the day
