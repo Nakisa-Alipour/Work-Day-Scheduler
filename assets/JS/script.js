@@ -1,10 +1,5 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
 
-/* The following function wraps all of the code that interacts with the DOM, 
-ensuring that it is executed only when the page has finished loading. */
-
+// The following will execute when DOM is fully rendered
 $(document).ready(function() {
   //Display the current day at the top of the calender
   var currentDate = dayjs().format("dddd, MMMM D");
@@ -30,13 +25,14 @@ for (var hour=startHour; hour<= endHour; hour++) {
   // Add a text area to allow the user to input an event description
   var $description = $("<textarea>").addClass("col-8 col-md-10 description row-3");;
     $description.attr("id", "event-" + hour);
-    $timeBlock.append($description);
   
 
   // Add a save button to save the user's event description
   var $saveBtn = $("<button>").addClass("btn saveBtn col-2 col-md-1");
   $saveBtn.attr("data-hour", hour);
   $timeBlock.append($saveBtn);
+
+  $timeBlock.append($description);
 
   // Add an icon to the save button
   var $icon = $("<i>").addClass("fas fa-save").attr("aria-hidden", true);
@@ -46,7 +42,7 @@ for (var hour=startHour; hour<= endHour; hour++) {
   $("#planner").append($timeBlock);
 
   // Add Classes to timeBlock: Past, Present, Future
-    Var currentHour = dayjs().hour();
+    var currentHour = dayjs().hour();
       if (hour < currentHour) {
         $timeBlock.addClass("past");
       } else if (hour === currentHour) {
@@ -66,12 +62,12 @@ $(".saveBtn").on("click", function(event) {
 });
 
 // Retrieve the saved events from local storage and display them
-for (var hour = startHour; hour <= endHour; hour++) {
-  var savedEvent = localStorage.getItem("event-" + hour);
-  if (savedEvent !== null) {
-    $("#event-" + hour).val(savedEvent);
-  }
-}
+//for (var hour = startHour; hour <= endHour; hour++) {
+  //var savedEvent = localStorage.getItem("event-" + hour);
+  //if (savedEvent !== null) {
+   // $("#event-" + hour).val(savedEvent);
+  //}
+//}
 
 
 //$(function () {
