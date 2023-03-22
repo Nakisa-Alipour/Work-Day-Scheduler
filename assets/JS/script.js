@@ -32,6 +32,13 @@ for (var hour=startHour; hour<= endHour; hour++) {
     $description.attr("id", "event-" + hour);
     $timeBlock.append($description);
   
+
+  // Add a save button to save the user's event description
+  var $saveBtn = $("<button>").addClass("btn saveBtn col-2 col-md-1");
+  $saveBtn.attr("data-hour", hour);
+  $timeBlock.append($saveBtn);
+
+  
     $(".description").each(function () {
       var time = $(this).attr("data-time");
     
@@ -44,12 +51,8 @@ for (var hour=startHour; hour<= endHour; hour++) {
       }
     });  
 
-  var $saveBtn = $("<button>")
-    $saveBtn.addClass("btn saveBtn col-2 col-md-1")
-    $saveBtn.addClass("aria-label", "save")
-    $saveBtn.attr("data-hour", hour);
-    $timeBlock.append($saveBtn);
-
+  
+    
   var $icon = $("<i>").addClass("fas fa-save").attr("aria-hidden", true);
     $saveBtn.append($icon);
   
