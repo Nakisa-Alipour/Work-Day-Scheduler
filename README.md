@@ -38,7 +38,8 @@ To use the Work Day Scheduler, simply click on a timeblock to enter an event. On
 The timeblocks are color-coded to indicate whether they are in the past (gray), present (red), or future (green). This allows you to quickly see which events are coming up and which ones you may have missed.
 
 
-<img width="817" alt="Screenshot 2023-03-22 at 8 21 00 pm" src="https://user-images.githubusercontent.com/124220654/226857874-2289235d-9acc-497b-b57b-3b03ff5f9ce7.png">
+<img width="1217" alt="Screenshot 2023-03-22 at 8 22 22 pm" src="https://user-images.githubusercontent.com/124220654/226858327-e7c559a2-fe02-455c-b87d-5e04dc1fde85.png">
+
 
 
 ## Credits
