@@ -2,13 +2,11 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 
-var currentTime = dayjs().hour();
-
 /* The following function wraps all of the code that interacts with the DOM, 
 ensuring that it is executed only when the page has finished loading. */
 
 $(document).ready(function() {
-  //Display the current dau at the top of the calender
+  //Display the current day at the top of the calender
   var currentDate = dayjs().format("dddd, MMMM D");
   $('#currentDay').text(currentDate);
   console.log(currentDate);
@@ -18,15 +16,19 @@ $(document).ready(function() {
 var startHour = 9;
 var endHour = 17;
 
-for (var hour=startHour; hour<= endHour; hour++) {
-  var $timeBlock = $("<div>").addClass("row timeblock");
-  var $hour = $("<div>").addClass("col-2 col-md-1 hour text-center py-3")
-    $hour.text(hour)    //instead of: $hour.text(dayjs({ hour }).format("hA"))
-    $timeBlock.append($hour);
-    console.log(hour);
 
-  var $description = $("<textarea>").addClass("col-8 col-md-10 description");
-    $description.addClass("row", "3");
+// Loop through each hour of the day
+for (var hour=startHour; hour<= endHour; hour++) {
+  // Create a time block container
+  var $timeBlock = $("<div>").addClass("row timeblock");
+
+  // Add an element to display the current hour
+  var $hour = $("<div>").addClass("col-2 col-md-1 hour text-center py-3")
+    $hour.text(hour)   
+    $timeBlock.append($hour);
+
+  // Add a text area to allow the user to input an event description
+  var $description = $("<textarea>").addClass("col-8 col-md-10 description row-3");;
     $description.attr("id", "event-" + hour);
     $timeBlock.append($description);
   
