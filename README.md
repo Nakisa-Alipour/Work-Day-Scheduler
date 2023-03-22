@@ -1,99 +1,47 @@
-# 05 Third-Party APIs: Work Day Scheduler
+# Work Day Scheduler
 
-## Your Task
+This is a simple calendar application that allows users to save events for each hour of the day. The app runs in the browser and features dynamically updated HTML and CSS powered by jQuery.
 
-Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
-
-You'll need to use the [Day.js](https://day.js.org/en/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Day.js in the browser.
+The application uses the Day.js library to work with date and time. Please read the documentation carefully and focus on using Day.js in the browser.
 
 ## User Story
 
-```md
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
+As an employee with a busy schedule, I want to add important events to a daily planner so that I can manage my time effectively.
+
 
 ## Acceptance Criteria
 
-```md
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours
-WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-WHEN I click into a timeblock
-THEN I can enter an event
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
-```
+Given I am using a daily planner to create a schedule:
 
-The following animation demonstrates the application functionality:
+When I open the planner, the current day is displayed at the top of the calendar.
+When I scroll down, I am presented with timeblocks for standard business hours.
+When I view the timeblocks for that day, each timeblock is color coded to indicate whether it is in the past, present, or future.
+When I click into a timeblock, I can enter an event.
+When I click the save button for that timeblock, the text for that event is saved in local storage.
+When I refresh the page, the saved events persist.
 
-<!-- @TODO: create ticket to review/update image) -->
-![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/05-third-party-apis-homework-demo.gif)
 
-## Grading Requirements
 
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
 
-This Challenge is graded based on the following criteria:
+## Getting Started
 
-### Technical Acceptance Criteria: 40%
+To use this application, simply clone the repository and open the index.html file in your web browser. The application will run in the browser.
 
-* Satisfies all of the above acceptance criteria plus the following:
 
-  * Uses a date utility library to work with date and time
+## Usage
 
-### Deployment: 32%
+To use the Work Day Scheduler, simply click on a timeblock to enter an event. Once you have entered an event, click the save button to save it. The application will automatically save your events to local storage, so you can refresh the page and your events will still be there.
 
-* Application deployed at live URL
+<img width="1425" alt="Screenshot 2023-03-22 at 8 08 53 pm" src="https://user-images.githubusercontent.com/124220654/226856973-dcb22c2a-8cba-4c7f-a829-25fb0ecccc10.png">
 
-* Application loads with no errors
 
-* Application GitHub URL submitted
+The timeblocks are color-coded to indicate whether they are in the past (gray), present (red), or future (green). This allows you to quickly see which events are coming up and which ones you may have missed.
 
-* GitHub repo contains application code
+<img width="817" alt="Screenshot 2023-03-22 at 8 21 00 pm" src="https://user-images.githubusercontent.com/124220654/226857362-7f260e29-b38c-4add-8d42-db0fa17821d8.png">
 
-### Application Quality: 15%
 
-* Application user experience is intuitive and easy to navigate
+## Credits
+This application was built using starter code provided by Trilogy Education Services. It was modified by me to meet the project requirements.
 
-* Application user interface style is clean and polished
+The Day.js library was used to work with date and time.
 
-* Application resembles the mock-up functionality provided in the Challenge instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
-- - -
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
