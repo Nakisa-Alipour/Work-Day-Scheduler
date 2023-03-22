@@ -38,29 +38,24 @@ for (var hour=startHour; hour<= endHour; hour++) {
   $saveBtn.attr("data-hour", hour);
   $timeBlock.append($saveBtn);
 
-  
-    $(".description").each(function () {
-      var time = $(this).attr("data-time");
-    
-      if (time < currentTime) {
-        $(this).addClass("past");
-      } else if (time === currentTime) {
-        $(this).addClass("present");
-      } else {
-        $(this).addClass("future");
-      }
-    });  
-
-  
-    
+  // Add an icon to the save button
   var $icon = $("<i>").addClass("fas fa-save").attr("aria-hidden", true);
-    $saveBtn.append($icon);
-  
+  $saveBtn.append($icon);
+
+  // Add the time block to the planner container
   $("#planner").append($timeBlock);
 
-    
-  
-}
+  // Add Classes to timeBlock: Past, Present, Future
+    Var currentHour = dayjs().hour();
+      if (hour < currentHour) {
+        $timeBlock.addClass("past");
+      } else if (hour === currentHour) {
+        $timeBlock.addClass("present");
+      } else {
+        $timeBlock.addClass("future");
+      }
+    };  
+
 
 // Allow users to enter an event and save it in local storage
 $(".saveBtn").on("click", function(event) {
