@@ -22,15 +22,20 @@ When I refresh the page, the saved events persist.
 
 
 
-
 ## Getting Started
 
 To use this application, simply clone the repository and open the index.html file in your web browser. The application will run in the browser.
 
 
+## URL for the deployed application: https://nakisa-alipour.github.io/Work-Day-Scheduler/
+
+
 ## Usage
 
 To use the Work Day Scheduler, simply click on a timeblock to enter an event. Once you have entered an event, click the save button to save it. The application will automatically save your events to local storage, so you can refresh the page and your events will still be there.
+
+
+
 
 <img width="1425" alt="Screenshot 2023-03-22 at 8 08 53 pm" src="https://user-images.githubusercontent.com/124220654/226856973-dcb22c2a-8cba-4c7f-a829-25fb0ecccc10.png">
 
